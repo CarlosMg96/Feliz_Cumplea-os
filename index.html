@@ -14,16 +14,24 @@
 </head>
 <body>
   <div class="container text-center">
+    <br>
     <h1>¡Feliz Cumpleaños, <strong>Judith</strong>!</h1>
-    <img src="https://lh3.googleusercontent.com/YuI1GXlMA_Sou8MtZWTJVLgXa1jQFh208nwODWpMu1aOAIY5WBN-SY953odtsF3j0X9Zaj3dfwcaFJ7QuRS8yH4uY7hKoeJtrLibjyUzCWm6Xc3MlEC_JyvIYP9RWelb-q8TJe-6CC6uVG9N-n7q03dX0cYVrY4xGjdVRezFd7qXw29baXcmERJHhfcYczw9ymmjkvFe5BWTaI6qMOv0fff8nhhEfk-K5__GxQE0zGzJBnbcKQvQH64AdZtj67KRHZvMTpU8Jksaku4QJRUstzbp6t_iwCdTeGrmHqRElj-IH0sTo4ECt9ZBUR1LT8yaA3EDP-jxzwedTVTgVslI79JKTvz82lfRpljNb4QXGsVNyBWppUZrpECCy4NLhvZanCs_lWfUPZ2-iEh0A5dwlkRWJ8db7uoPcFbrQvtaC0Dt5P7q7gCGk0Ucw8YLiYca_65g9jahmTlccPGZSll18cwGnGDaItx2Se2iL11TKcZ7H0tuR6IDkbOi4d3pe53piRZjrUdnXc4sdt52i_IjN98K3rCKNTBgchXikboAuM949G7iM_73YAQWFECEn1IprdUmPAMbHr5FvmQmOfwDecepU4WjRytKnfqfWMgdEMuvZWrqwR1SvnRGo9GEjuX21PcYMgOUG9Wsko4fYpDBD7ncvHeWK4osALkXGcV8RiavhF47sOrcqskIkoTZKua8OvFfSaxxm8FbxhLtd8cqRFGgcDQh4JwPb-ukjYwmf3N_1rXGcN_z62h6-NVLgZ9500V_8y1AaBrC8NaOIoWIA89Bg_AKrijyCopAfKBSnBE-506uKkM629ATZGaBR33aQnherjdFa8E1Srj85WEJB8YmKFIY9e2qYd9Vlk6DCh0ydGEBXrb-_RqvPN-Y29oRpPDOCQ74_P_TiBl3eXnBSektT1N3QK-hwyadvWBj-SO0cqN4RQ=w816-h813-s-no?authuser=0"
-     alt="Feliz Cumpleaños" class="img-fluid" width="20%" style="border-radius: 30px;">
-    <div class="card mt-4" style="background: linear-gradient(135deg, #FF7F50, #FFC0CB);">
+    <img src="assets/Judith.jpg"
+     alt="Feliz Cumpleaños" class="img-fluid" width="20%" style="border-radius: 9px;">
+    <div class="card mt-4" style="background: linear-gradient(135deg, #FF7F50, #FFC0CB); border-radius: 14px;">
       <div class="card-body">
-                    <!-- Agregar la etiqueta de audio con controles -->
-    <audio src="./assets/Las mañanitas tradicionales con mariachi(MP3_128K).mp3" controls autoplay loop></audio>
         <p class="card-text">Feliz Año nuevo!!</p>
+        <p class="card-text"><strong>Voglio dirti "Dio amiamoci, liberami"</strong></p>
+
+                <!-- Agregar la etiqueta de audio con controles -->
+    <audio src="./assets/Las mañanitas tradicionales con mariachi(MP3_128K).mp3" controls autoplay loop></audio>
+    <br>
+    <br>
         <button id="mostrarInfoBtn" class="btn btn-primary" style="border-radius: 6px;">Mensaje de Feliz Cumpleaños</button>
         <div id="contenidoAdicional" style="display: none;">
+          <br>
+             <!-- Agregar la etiqueta de video con controles -->
+        <!-- <video src="/assets/video_feliz_cumpleaños.mp4" width="30%" controls autoplay></video> -->
           <p class="card-text">En este día tan especial, quería tomarme un momento para desearte un cumpleaños lleno de alegría, amor y muchas bendiciones. Eres una persona increíble y te mereces lo mejor en la vida.</p>
           <p class="card-text">Que este nuevo año esté lleno de éxitos, experiencias maravillosas y momentos inolvidables. ¡Que se cumplan todos tus sueños y deseos!</p>
           <p class="card-text">Gracias por ser una amiga tan especial. Tu amistad es un tesoro para mí y valoro cada momento que compartimos juntas. Espero que este día esté lleno de sorpresas y felicidad.</p>
@@ -35,20 +43,25 @@
     </div>
   </div>
 
-
   <!-- Agregar los enlaces a los archivos JavaScript de Bootstrap y tu propio script -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script>
     const mostrarInfoBtn = document.getElementById('mostrarInfoBtn');
     const contenidoAdicional = document.getElementById('contenidoAdicional');
+    const video = document.querySelector('video');
+    const audio = document.querySelector('audio');
     
     mostrarInfoBtn.addEventListener('click', function() {
       if (contenidoAdicional.style.display === 'none') {
         contenidoAdicional.style.display = 'block';
         mostrarInfoBtn.textContent = 'Ocultar Información';
+        audio.pause();
+        video.play();
       } else {
         contenidoAdicional.style.display = 'none';
         mostrarInfoBtn.textContent = 'Clic Aquí';
+        audio.play();
+        video.pause();
       }
     });
   </script>
